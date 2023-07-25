@@ -9,9 +9,11 @@
 
     $fruit = "apple";
     $winnie_pooh = "Hello, I'm Winnie. I have 2 {$fruit}s";
+    // операторные скобки, указываем, что является именем переменной
 
     define("PAGE","new page");
     const PAGE2 = 'new const';
+    // два способа объявления констант в php
 ?>
 
 <!doctype html>
@@ -21,10 +23,10 @@
     <title><?php echo $var; ?></title>
 </head>
 <body>
+    <h1><?php echo $var; ?></h1>
     <p><?php echo $винни_пух; ?></p>
     <p><?php echo $winnie_pooh; ?></p>
     <p><?php echo PAGE; ?></p>
     <p><?php echo PAGE2; ?></p>
 </body>
 </html>
-
