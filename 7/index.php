@@ -7,28 +7,39 @@
 
     $light = 'green';
 
-    if ($light == 'green') {
+    if ( $light == 'green' ) {
         echo 'We may go';
     }
 
     var_dump((bool) 0); // Приведение к булеан
 
-    if(5 > 3) {
+    // 0, 0.0, NULL, "", "0", false - приводятся к false
+    // ! - отрицание либо инверсия
+
+    if ( 5 > 3 ) {
         echo "ok";
     }
 
-    if (5 != 4) echo "OK";
+    if ( 5 != 4 ) 
+        echo "OK";
 
-    if ($light == 'green') {
+    if ( 5 != 4 ) echo "OK"; // можно так записывать для одной строки
+
+    if ( $light == 'green' ) {
         echo 'We may go';
     } else {
         echo "We must stop";
     }
 
-    if ($light == 'green') {
+    if ( $light == 'green' ) {
         echo 'We may go';
-    } elseif ($light == 'yellow') {
+    } elseif ( $light == 'yellow' ) {
         echo 'We may ready';
     } else {
         echo "We must stop";
     }
+
+    // else if - два слова иногда может не работать (смотреть документацию)
+    // elseif - работает всегда
+    // elseif - может быть сколько угодно
+    // можно не писать else, если не нужна эта ветка

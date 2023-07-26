@@ -41,3 +41,9 @@ LABEL;
         This "is" 'string' $int
 HERE;
     echo $str5;
+
+    /*
+        В php 8 типов данных.
+        boolean, integer, float, string...
+        true, false - Регистронезависимые 
+    /*

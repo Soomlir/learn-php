@@ -20,10 +20,10 @@
     <table border="1" style="border-collapse: collapse;">
 <?php
     $i = 1;
-    while($i <= 3) {
+    while ( $i <= 3 ) {
         echo "<tr>";
         $j = 1;
-        while($j <= 5) {
+        while ( $j <= 5 ) {
             echo '<td style="padding: 15px;">';
             echo "$";
             echo '</td>';
@@ -32,25 +32,29 @@
         echo "</tr>";
         $i++;
     }
+?>
 
+</table>
+
+<?php
     $year = 1900;
     echo '<select>';
-        while($year <= 2022) {
-            echo '<option value="$year">' . $year . '</option>';
+        while ( $year <= 2022 ) {
+            echo "<option value=". $year . ">" . $year . "</option>";
             $year++;
         }
     echo '</select>';
+    echo "<br>";
 ?>
-    </table>
+    
 <?php
     $j = 1;
     do {
         echo $j++ . "<br>";
-    } while($j <= 7);
+    } while ( $j <= 7 );
+
+    // Итерация - каждый шаг цикла
+    // $i++  -  $i = $i + 1; $i += 1;
 ?>
 </body>
 </html>
-
-
-
-
