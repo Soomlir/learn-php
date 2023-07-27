@@ -2,7 +2,10 @@
     // HTTP Заголовок - информация, которая отправляется сервером браузеру
     // и они нужны для того, чтобы браузер корректно отобразил страницу
 ?>
-<?php header('Content-Type: text/html; charset=utf-8'); // имеет приоритет, над тегом charset в html?>
+<?php header('Content-Type: text/html; charset=utf-8'); // имеет приоритет, над тегом charset в html
+    // указание браузеру, какую кодировку хотим использовать
+    // Кодировку можно указать с помощью файла .htaccess
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -13,9 +16,13 @@
 </body>
 </html>
 
-<?php
-    header('Location: http://yandex.ru');
-    header('refresh: 5, url=inc.php');
+<?php   
+    // header - Отправка HTTP Заголовков
+    // заголовки должны быть отправить до вывода, отправляются только один раз
+    header('Location: http://yandex.ru'); // редирект на другую страницу
+    header('refresh: 5, url=inc.php'); // перенаправление через 5 секунд
+    
+    // exit, die - для прекращения работы кода дальше после этих функций
     exit; // альтернативный синтаксис
     exit();
     die;

@@ -32,7 +32,13 @@
     }
 ?>
 
-<?php if ($bool): ?>
+<?php
+    // : аналог {
+    // endif; аналог }
+?>
+
+<?php
+    if ($bool): ?>
             <table>
                 <tr>
                     <td><?php echo $str1; ?></td>
@@ -40,7 +46,9 @@
                     <td><?php echo $str3; ?></td>
                 </tr>
             </table>
-<?php endif; ?>
+<?php 
+    endif; 
+?>
 
 
 <?php
@@ -54,5 +62,3 @@
 <?php  foreach ($names as $name): ?>
             Name: <?php echo $name; ?> <br>
 <?php  endforeach; ?>
-
-
