@@ -8,6 +8,7 @@
         } else {
             $_SESSION['res'] = 'Неверный логин';
         }
+
         header('Location: sess1.php');
         die;
     }
@@ -23,7 +24,7 @@
 <p><?php
     if (isset($_SESSION['res'])) {
         echo $_SESSION['res'];
-        unset($_SESSION['res']);
+        unset($_SESSION['res']); // удалить переменную
     }
 ?></p>
 

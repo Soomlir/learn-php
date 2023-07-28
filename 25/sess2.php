@@ -3,7 +3,6 @@
 
     $_SESSION['name'] = 'Igor';
     echo $_SESSION['name'];
-    echo $_SESSION['name'];
 
     unset($_SESSION['name']); // - удаляет переменную
     session_unset(); // Удалит все сессионные переменные
