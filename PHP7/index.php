@@ -3,13 +3,14 @@
 
     // Оператор объединения с NULL
     echo $user = isset($_GET['user']) ? $_GET['user'] : 'guest';
-    echo $user = $_GET['user'] ?? 'guest';
-    echo $user = $_GET['user'] ?? $_POST['user'] ?? 'guest';
+    echo $user = $_GET['user'] ?? 'guest'; // если true - $_GET['user'], false - 'guest'
+    echo $user = $_GET['user'] ?? $_POST['user'] ?? 'guest'; // цепочка проверок
 
     // Оператор spaceship (Космический корабль)
     $a = 1;
     $b = 2;
     echo $a <=> $b; // проверяет на -меньше -равно -больше
+    // если а меньше б - -1, если а равно б - 0, если а больше б - 1
 
     if (($a <=> $b) === 1) {
         echo "$a > $b";
@@ -41,7 +42,7 @@
     ]);
     echo DB[1]; // login
 
-    define('DB', [
+    define('DB2', [
         'DBHOST' => 'localhost',
         'DBUSER' => 'root',
         'DBPASS' => 'root',
@@ -49,17 +50,17 @@
     ]);
     echo DB['DBUSER'];
 
-    // Групповые декларации use - группировка одинаковых пространств имен
+    // групповые декларации use - группировка одинаковых пространств имен
 
-    // Декларация скалярных типов
-    function sum(int ...$ints) { // $int - массив
+    // декларация скалярных типов (int ...$ints) - приведет к int
+    function sum(int ...$ints) { // $ints - массив
         return array_sum($ints);
     }
 
-    // Декларация возможных значений
+    // декларация возможных значений
     function sum2($a, $b): int {
         return $a + $b;
     }
 
-    // Функция целочисленного деления intdiv()
+    // функция целочисленного деления intdiv()
     intdiv(10,3);

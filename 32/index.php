@@ -6,12 +6,6 @@
         save_mess();
         header('Location: index.php');
     }
-
-    $messages = get_mess();
-//    $messages = array_mess($messages);
-//    print_r(array_print($messages));
-
-
 ?>
 <!doctype html>
 <html lang="ru">

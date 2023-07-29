@@ -1,6 +1,6 @@
 <?php
     function clear() {
-        global $db;
+        global $db; // объявим глобальную переменную
         foreach ($_POST as $key => $value) {
             $_POST[$key] = mysqli_real_escape_string($db, $value);
         }
@@ -9,8 +9,8 @@
     function save_mess() {
         global $db;
         clear();
-        extract($_POST);
-//        $id = (int)$_POST['id'];
+        extract($_POST); // extract() - берет из массива ключи и создаем из них переменные
+        // $id = (int)$_POST['id']; - приведение к инту
         $query = "INSERT INTO `gb` (name, text) VALUES ('$name', '$text')";
         mysqli_query($db, $query);
     }
