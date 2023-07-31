@@ -2,7 +2,6 @@
     // construct - вызывается всегда, при создании объекта
     // destruct - срабатывает, когда освобождаются все ссылки на объект (удаляется объект из памяти)
 class Car4 {
-
     public $color = 'black';
     public $wheels;
     public $speed = 180;
@@ -22,9 +21,11 @@ class Car4 {
         $this->wheels = $wheels;
         $this->speed = $speed;
         $this->brand = $brand;
+        // self - сам, этот. Указывает не текущий класс.
         self::$countCar++; // :: - Оператор разрешения области видимости
     }
 
+    // $this - не доступен в статическом методе
     public static function getCount() {
         return self::$countCar; // self указывает на текущий класс. Car4::$counterCar - можем так писать, но правильней
         // внутри класса писать - self
@@ -42,6 +43,3 @@ class Car4 {
         return "<p>Данные тестового авто " . self::TEST_CAR_SPEED . "</p>";
     }
 }
-
-
-
