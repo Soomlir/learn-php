@@ -19,5 +19,4 @@ class NotebookProduct extends Product {
     public function getCpu() {
         return $this->cpu;
     }
-
 }

@@ -17,18 +17,3 @@ debug($notebook);
 
 echo $book->getProduct();
 echo $notebook->getProduct();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

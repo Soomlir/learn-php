@@ -19,5 +19,4 @@ class BookProduct extends Product {
     public function getNumPages() {
         return $this->numPages;
     }
-
 }

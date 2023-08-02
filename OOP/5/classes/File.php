@@ -1,8 +1,8 @@
 <?php
 
 class File {
-    public $fp;
-    public $file;
+    public $fp; // указатель на открытый файл
+    public $file; // путь к файлу
 
     public function __construct($file) {
         echo $this->file = $file; // записываем путь
@@ -21,6 +21,7 @@ class File {
     }
 
     public function write($text) {
+        // записываем в файл, иначе срабатывает if
         if (fwrite($this->fp, $text . PHP_EOL) === FALSE) { // PHP_EOL - константа переноса строки
             echo 'Не могу произвести запись в файл' . $this->file;
             exit;

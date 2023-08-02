@@ -18,6 +18,13 @@
             // echo __METHOD__ . "<br>"; // проверить работу конструктора
         }
 
+        // public function Car3() {} - аналог конструктора - не рекомендуется использовать
+
+        public function getLorem() {
+            ?>
+                <div class="one">Hello World!</div>
+            <?php
+        }
 
         public function getCarInfo() { // при объявлении методов, модификаторы не обязательны
             echo $this->color; // this - указатель на текущий объект

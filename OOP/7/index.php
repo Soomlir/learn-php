@@ -24,18 +24,3 @@
 
     echo $book->getProduct('book');
     echo $notebook->getProduct();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

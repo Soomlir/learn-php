@@ -17,7 +17,7 @@
 
     echo $car1->getPrototypeInfo();
 
-    echo Car4::TEST_CAR;
+    echo Car4::TEST_CAR; // обратиться к константе вне класса
 
     echo Car4::class; // имя класса. Возможность полезна, когда работаем с пространством имен
 

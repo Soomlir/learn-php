@@ -9,7 +9,7 @@
         public $wheels;
         public $speed = 180;
         public $year = 2022;
-        var $brand; // var - 4 версия PHP - не было public protected private
+        var $brand; // var (синоним public) - 4 версия PHP - не было public protected private
 
         // доступно с PHP 5.6
         public $path = __DIR__ . '/test';
