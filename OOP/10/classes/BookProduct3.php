@@ -1,6 +1,6 @@
 <?php
 
-class BookProduct2 extends Product2 {
+class BookProduct2 extends Product2 implements i3D {
 
     public $numPages;
 
@@ -11,7 +11,11 @@ class BookProduct2 extends Product2 {
         $this->setDiscount(5);
     }
 
-    public function getProduct() {
+    public function test() {
+        var_dump(self::TEST2);
+    }
+
+     public function getProduct() {
         $out = parent::getProduct();
         $out .= "Цена без скидки: {$this->price}<br>";
         $out .= "Количество страниц: {$this->numPages}<br>";
@@ -21,5 +25,10 @@ class BookProduct2 extends Product2 {
 
     public function getNumPages() {
         return $this->numPages;
+    }
+
+    // должны следить за областью видимости, либо совпадать с родительским абстрактным, либо быть ниже
+    public function addProduct($name, $price, $numPages = 0) {
+        var_dump($name, $price, $numPages);
     }
 }

@@ -5,7 +5,7 @@ class NotebookProduct extends Product {
     public $cpu;
 
     public function __construct($name, $price, $cpu) { // когда переопределяем метод родительского класса, мы его перезаписываем
-        parent::__construct($name, $price); // parent - указывает на родительский класс
+        parent::__construct($name, $price); // parent - указывает на родительский класс, вызываем конструктор родительского класса
         // Обратились к родительскому классу и вызвали нужный нам метод
         $this->cpu = $cpu;
     }

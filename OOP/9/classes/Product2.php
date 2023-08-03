@@ -26,7 +26,7 @@ class Product2 {
         return $this->name;
     }
 
-    public function getPrice() {
+    public function getPrice() { // цена со скидкой
         return $this->price - ($this->discount / 100 * $this->price);
     }
 
@@ -36,17 +36,16 @@ class Product2 {
                     Цена со скидкой: {$this->getPrice()}<br>";
     }
 
-    public function getDiscount(): int
+    public function getDiscount(): int // - int - декларация возвращаемого значения
     {
         return $this->discount;
     }
 
-    public function setDiscount(int $discount)
+    public function setDiscount(int $discount) // int - декларация установленного значения
     {
         $this->discount = $discount;
     }
 
     // По совету Мэта Застры изначально для всех свойство поставить private.
     // Большинство методов будут public. По необходимости понижать контроль доступа.
-
 }
