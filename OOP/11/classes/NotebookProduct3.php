@@ -1,11 +1,11 @@
 <?php
 
-class NotebookProduct2 extends Product2 {
+class NotebookProduct3 extends Product3 implements IGadget {
 
     public $cpu;
 
     public function __construct($name, $price, $cpu) { // когда переопределяем метод родительского класса, мы его перезаписываем
-        parent::__construct($name, $price); // parent - указывает на родительский класс
+        parent::__construct($name, $price); // parent - указывает на родительский класс, вызываем конструктор родительского класса
         // Обратились к родительскому классу и вызвали нужный нам метод
         $this->cpu = $cpu;
     }
@@ -18,5 +18,13 @@ class NotebookProduct2 extends Product2 {
 
     public function getCpu() {
         return $this->cpu;
+    }
+
+    public function addProduct($name, $price) {
+
+    }
+
+    public function getCase() {
+        
     }
 }

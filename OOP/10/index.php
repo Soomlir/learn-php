@@ -1,14 +1,15 @@
 <?php
+    require_once 'classes/i3D.php';
     require_once 'classes/Product3.php';
     require_once 'classes/BookProduct3.php';
-    require_once 'classes/i3D.php';
+    
 
     function debug($data)
     {
         echo "<pre>" . print_r($data, 1) . "</pre>";
     }
 
-    $book = new BookProduct2("Три мушкетера", 20, 1000);
+    $book = new BookProduct3("Три мушкетера", 20, 1000);
     debug($book);
 
     echo $book->getProduct();
