@@ -1,45 +1,46 @@
 <?php
-    /*
+/*
      * if (expression) {
      *  instructions;
      * }
      */
 
-    $light = 'green';
+$light = 'green';
 
-    if ( $light == 'green' ) {
-        echo 'We may go';
-    }
+if ($light == 'green') {
+    echo 'We may go';
+}
 
-    var_dump((bool) 0); // Приведение к булеан
+var_dump((bool) 0); // приведение к булеан
 
-    // 0, 0.0, NULL, "", "0", false - приводятся к false
-    // ! - отрицание либо инверсия
+// 0, 0.0, NULL, "", "0", false - приводятся к false
 
-    if ( 5 > 3 ) {
-        echo "ok";
-    }
 
-    if ( 5 != 4 ) 
-        echo "OK";
+if (5 > 3) {
+    echo "ok";
+}
 
-    if ( 5 != 4 ) echo "OK"; // можно так записывать для одной строки
+// ! - отрицание либо инверсия
+if (5 != 4) // запись без скобок для одной строки внутри
+    echo "OK";
 
-    if ( $light == 'green' ) {
-        echo 'We may go';
-    } else {
-        echo "We must stop";
-    }
+if (5 != 4) echo "OK"; // можно так записывать для одной строки
 
-    if ( $light == 'green' ) {
-        echo 'We may go';
-    } elseif ( $light == 'yellow' ) {
-        echo 'We may ready';
-    } else {
-        echo "We must stop";
-    }
+if ($light == 'green') {
+    echo 'We may go';
+} else {
+    echo "We must stop";
+}
 
-    // else if - два слова иногда может не работать (смотреть документацию)
-    // elseif - работает всегда
-    // elseif - может быть сколько угодно
-    // можно не писать else, если не нужна эта ветка
+if ($light == 'green') {
+    echo 'We may go';
+} elseif ($light == 'yellow') {
+    echo 'We may ready';
+} else {
+    echo "We must stop";
+}
+
+// else if - два слова иногда может не работать (смотреть документацию)
+// elseif - работает всегда
+// elseif - может быть сколько угодно
+// можно не писать else, если не нужна эта ветка
