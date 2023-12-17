@@ -1,24 +1,24 @@
 <?php
-    require_once 'classes/i3D.php';
-    require_once 'classes/Product3.php';
-    require_once 'classes/BookProduct3.php';
-    
+require_once 'classes/i3D.php';
+require_once 'classes/Product3.php';
+require_once 'classes/BookProduct3.php';
 
-    function debug($data)
-    {
-        echo "<pre>" . print_r($data, 1) . "</pre>";
-    }
 
-    $book = new BookProduct3("Три мушкетера", 20, 1000);
-    debug($book);
+function debug($data)
+{
+    echo "<pre>" . print_r($data, 1) . "</pre>";
+}
 
-    echo $book->getProduct();
+$book = new BookProduct3("Три мушкетера", 20, 1000);
+debug($book);
 
-    // не можем создать экземпляр класса, который является абстрактным
-    $product = new Product('Test', 1); // абстрактный продукт
-    // чтобы не создавать абстрактные продукты существуют абстрактные классы
-  
-    $book->addProduct('Test', 10);
+echo $book->getProduct();
+
+// не можем создать экземпляр класса, который является абстрактным
+$product = new Product('Test', 1); // абстрактный продукт
+// чтобы не создавать абстрактные продукты существуют абстрактные классы
+
+$book->addProduct('Test', 10);
 
     // Абстрактный классы нужны для того, чтобы не могли создать от них экземпляр класса
     // Если есть хоть один абстрактный метод, класс должен быть абстрактным

@@ -1,7 +1,8 @@
 <?php
-  
+
 namespace classes\interfaces;
 
-interface IGadget {
+interface IGadget
+{
   public function getCase();
 }

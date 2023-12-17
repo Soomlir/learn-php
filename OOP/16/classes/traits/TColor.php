@@ -2,10 +2,12 @@
 
 namespace classes\traits;
 
-trait TColor {
+trait TColor
+{
   private $color;
-  
-  function getColor() {
+
+  function getColor()
+  {
     return $this->color;
   }
 }

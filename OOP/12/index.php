@@ -3,7 +3,8 @@
 use classes\interfaces\IGadget;
 use classes\interfaces\i3D;
 
-function autoLoader1($class) {
+function autoLoader1($class)
+{
   $file = __DIR__ . "/classes/{$class}.php";
 
   if (file_exists($file)) {
@@ -12,7 +13,8 @@ function autoLoader1($class) {
 }
 spl_autoload_register('autoLoader1');
 
-function autoLoader2($class) {
+function autoLoader2($class)
+{
   $file = __DIR__ . "/classes/interfaces/{$class}.php";
 
   if (file_exists($file)) {

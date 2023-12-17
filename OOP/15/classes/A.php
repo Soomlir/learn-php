@@ -1,14 +1,18 @@
 <?php
+
 namespace classes;
 
-class A {
+class A
+{
   protected const TEST = "Class A";
 
-  public function getTest() {
+  public function getTest()
+  {
     var_dump(self::TEST);
   }
 
-  public function getTest2() {
+  public function getTest2()
+  {
     var_dump(static::TEST); // указывает на тот класс, в котором работаем
   }
 }

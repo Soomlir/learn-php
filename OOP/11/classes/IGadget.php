@@ -1,5 +1,6 @@
 <?php
-  
-interface IGadget {
+
+interface IGadget
+{
   public function getCase();
 }

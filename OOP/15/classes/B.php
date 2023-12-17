@@ -2,7 +2,7 @@
 
 namespace classes;
 
-class B extends A {
+class B extends A
+{
   const TEST = "Class B";
-  
 }

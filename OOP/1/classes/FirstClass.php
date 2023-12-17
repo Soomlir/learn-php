@@ -1,6 +1,7 @@
 <?php
-    class FirstClass {
-        // своства
+class FirstClass
+{
+    // своства
 
-        // методы
-    }
+    // методы
+}

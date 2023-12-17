@@ -1,6 +1,7 @@
 <?php
 
-class Product2 {
+class Product2
+{
     private $name;
     protected $price;
 
@@ -17,20 +18,24 @@ class Product2 {
 
     // Модификаторы доступа - предназначены для контроля кода
 
-    public function __construct($name, $price) {
+    public function __construct($name, $price)
+    {
         $this->name = $name;
         $this->price = $price;
     }
 
-    public function getName() {
+    public function getName()
+    {
         return $this->name;
     }
 
-    public function getPrice() { // цена со скидкой
+    public function getPrice()
+    { // цена со скидкой
         return $this->price - ($this->discount / 100 * $this->price);
     }
 
-    public function getProduct() {
+    public function getProduct()
+    {
         return "<hr><b>О товаре: </b><br>
                     Наименование:" . $this->name . "<br>
                     Цена со скидкой: {$this->getPrice()}<br>";
