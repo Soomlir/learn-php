@@ -1,8 +1,10 @@
 <?php
 require_once 'funcs.php';
+
 if (!empty($_POST)) {
     save_mess();
     header('Location: index.php');
+    exit;
 }
 
 $messages = get_mess();

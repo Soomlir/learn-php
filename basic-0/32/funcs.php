@@ -3,6 +3,7 @@ function clear()
 {
     global $db; // объявим глобальную переменную
     foreach ($_POST as $key => $value) {
+        // Получится массив $_POST c экранированными данными
         $_POST[$key] = mysqli_real_escape_string($db, $value);
     }
 }
@@ -12,7 +13,10 @@ function save_mess()
     global $db;
     clear();
     extract($_POST); // extract() - берет из массива ключи и создаем из них переменные
-    // $id = (int)$_POST['id']; - приведение к инту
+    // $id = (int)$_POST['id']; - приведение к инту строки (явное приведение)
+
+    // $name = mysqli_real_escape_string($db, $_POST['name']);
+    // $text = mysqli_real_escape_string($db, $_POST['text']);
     $query = "INSERT INTO `gb` (name, text) VALUES ('$name', '$text')";
     mysqli_query($db, $query);
 }

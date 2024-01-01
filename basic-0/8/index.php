@@ -18,7 +18,7 @@
 
     //    $i = 1;
     //    while($i <= 10) {
-    //        echo $i++ . "<br>";
+    //        echo $i++ . "<br>"; // $i = $i + 1; $i += 1; - аналоги записи
     //    }
     ?>
     <table border="1" style="border-collapse: collapse;">
@@ -38,26 +38,30 @@
         }
         ?>
     </table>
+        
 
     <?php
-    $year = 1900;
-    echo '<select>';
-    while ($year <= 2022) {
-        echo "<option value=" . $year . ">" . $year . "</option>";
-        $year++;
-    }
-    echo '</select>';
-    echo "<br>";
+        $year = 1900;
+        echo '<select>';
+        while ($year <= 2022) {
+            echo "<option value=" . $year . ">" . $year . "</option>";
+            $year++;
+        }
+        echo '</select>';
+        echo "<br>";
     ?>
 
     <?php
-    $j = 1;
-    do {
-        echo $j++ . "<br>";
-    } while ($j <= 7);
+        $j = 1;
+        do {
+            echo $j++ . "<br>";
+        } while ($j <= 7);
 
     // Итерация - каждый шаг цикла
     // $i++  -  $i = $i + 1; $i += 1;
-    ?>
+
+    // Управляющие последовательности выполняются только в двойных кавычках
+
+?>
 </body>
 </html>

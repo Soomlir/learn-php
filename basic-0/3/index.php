@@ -1,18 +1,18 @@
 <?php
 $var = 'Hello World';
 echo $var;
-$var = 'page title';
+$var = 'page title'; // переопределили переменную (перезаписали значение)
 $винни_пух = "Hello, I'm Winnie";
 
 $var2 = 'a';
-$Var2 = 'A'; // две разные переменные, PHP - Регистрозависимый язык
+$Var2 = 'A'; // две разные переменные, PHP - регистрозависимый язык
 
 $fruit = "apple";
 $winnie_pooh = "Hello, I'm Winnie. I have 2 {$fruit}s";
 // операторные скобки, указываем, что является именем переменной
 
 define("PAGE", "new page");
-const PAGE2 = 'new const';
+const PAGE2 = 'new const'; // так определяются константы внутри классов
 // два способа объявления констант в php
 
 /*

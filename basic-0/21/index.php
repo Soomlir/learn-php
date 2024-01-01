@@ -1,7 +1,7 @@
 <?php
 // date() - чаще всего используется при работе с датой и временем
 echo date('Y-m-d H:i:s'); // в одинарных, либо двойных кавычках
-// выводится дата на сервер, а не компьютера
+// выводится дата сервера, а не компьютера
 
 // Выводится дата и время на сервере
 echo "<br>" . date('Y-m-d a g:i:s') . "<br>";
@@ -10,7 +10,7 @@ echo "<br>" . date('Y-m-d a g:i:s') . "<br>";
 echo date_default_timezone_get();
 echo "<br>";
 
-// устанавливает временной пояс 
+// устанавливает временной пояс, возвращает true/false
 date_default_timezone_set('Europe/Moscow');
 
 echo date('Y-m-d g:i:s', 1); // 1970-01-01 0:00:01
@@ -31,7 +31,7 @@ echo $date['year'];
 
 echo date('Y-m-d g:i:s', strtotime("+ 1 day")); // завтра в это же время
 
-// mktime(); // Возвращает метку для заданной даты
+// mktime(); // Возвращает метку timestamp для заданной даты
 echo time() . "<br>";
 echo mktime(
     date('H'),

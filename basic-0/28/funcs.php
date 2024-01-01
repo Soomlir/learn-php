@@ -17,7 +17,7 @@ function get_mess()
 // из строки получаем массив
 function array_mess($messages)
 {
-    $messages = explode("\n***\n", $messages);
+    $messages = explode("\n***\n", $messages); // в txt последняя - пустая строка
     // array_pop() - возвращает последний элемент массива и удаляет его из массива
     array_pop($messages);
     return array_reverse($messages); // переворачиваем массив

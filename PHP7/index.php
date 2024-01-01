@@ -1,10 +1,16 @@
 <?php
 // PHP7 вышел в 2015 - PHP7 стал значительно быстрее PHP5 (PHP6 Не было)
+// Значительно увеличилась скорость работы PHP7 по сравнению с PHP5
 
 // Оператор объединения с NULL
 echo $user = isset($_GET['user']) ? $_GET['user'] : 'guest';
-echo $user = $_GET['user'] ?? 'guest'; // если true - $_GET['user'], false - 'guest'
+
+echo $user = $_GET['user'] ?? 'guest'; 
+// Есть ли в $_GET['user'] - ключ user
+// если true - $_GET['user'], false - 'guest'
+
 echo $user = $_GET['user'] ?? $_POST['user'] ?? 'guest'; // цепочка проверок
+
 
 // Оператор spaceship (Космический корабль)
 $a = 1;
@@ -27,7 +33,7 @@ define("ANIMALS", [
     'bird'
 ]);
 
-echo ANIMALS[2];
+echo ANIMALS[2]; // bird
 
 define('DBHOST', 'localhost');
 define('DBUSER', 'root');
@@ -50,15 +56,17 @@ define('DB2', [
 ]);
 echo DB['DBUSER'];
 
-// групповые декларации use - группировка одинаковых пространств имен
+// Групповые декларации use - группировка одинаковых пространств имен
+// Классы, функции и константы импортируемые из одного и того же namespace,
+// теперь можно группировать в одном операторе use
 
-// декларация скалярных типов (int ...$ints) - приведет к int
+// Декларация скалярных типов (int ...$ints) - приведет к int все элементы
 function sum(int ...$ints)
 { // $ints - массив
     return array_sum($ints);
 }
 
-// декларация возможных значений
+// Декларация возвращаемых значений
 function sum2($a, $b): int
 {
     return $a + $b;

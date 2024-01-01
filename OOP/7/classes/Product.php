@@ -22,7 +22,7 @@ class Product {
         return $this->numPages;
     }
 
-    public function getProduct($type = 'notebook') {
+    public function getProduct($type = 'notebook') { // $type - костыль
         $out = "<hr><b>О товаре: </b><br>
                     Наименование:" . $this->name . "<br>
                     Цена: {$this->price}<br>";
