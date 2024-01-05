@@ -5,7 +5,7 @@ use classes\interfaces\i3D;
 
 function autoLoader1($class)
 {
-  $file = __DIR__ . "/classes/{$class}.php";
+  $file = __DIR__ . "/classes/{$class}.php"; // все файлы подключатся из этой директории
 
   if (file_exists($file)) {
     require_once $file;

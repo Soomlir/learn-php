@@ -14,6 +14,8 @@ debug($book);
 
 echo $book->getProduct();
 
-    // var_dump($book->public);
-    // var_dump($book->protected); // - ошибка, обращаемся к защищенному свойству
-    // var_dump($book->private); // - ошибка, обращаемся к не определенному свойству
+echo $book->getPrice();
+
+// var_dump($book->public);
+// var_dump($book->protected); // - ошибка, обращаемся к защищенному свойству
+// var_dump($book->private); // - ошибка, обращаемся к не определенному свойству

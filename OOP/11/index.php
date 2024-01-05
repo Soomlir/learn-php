@@ -32,7 +32,7 @@ $a = new A();
 $b = new B();
 $c = new C();
 
-    // является ли экзепляром данного класса
-    // var_dump($a instanceof A);
-    // var_dump($b instanceof B); // A, B наследуется от родителя
-    // var_dump($c instanceof C);
+// является ли экзепляром данного класса
+// var_dump($a instanceof A); // true или false
+// var_dump($b instanceof B); // A, B наследуется от родителя
+// var_dump($c instanceof C);
